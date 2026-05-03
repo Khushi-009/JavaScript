@@ -28,7 +28,35 @@ const myObject = {  // type is object
 }
 
 const myFunction = function(){   // type is function
-    console.log("hello world");
+    // console.log("hello world");
 }
 
-console.log(typeof OutsideTemp)
+// console.log(typeof OutsideTemp)
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack  (Primitive) (stack is used with primitive)  , Heap  (Non-primitive)
+// stack me same variable ki copy milti hai and heap me ussi variable ka reference 
+
+let myName = "khushiarya"
+
+let anotherName = myName
+anotherName = "chaiaurcode"
+
+// console.log(anotherName);
+// console.log(myName);
+
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ypl"
+}
+
+let userTwo = userOne
+
+userTwo.email = 'khushi@google.com'
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
