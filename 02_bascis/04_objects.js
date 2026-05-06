@@ -34,14 +34,38 @@ const obj4 = {5: "a", 6: "b"}
 
 
 const obj3 = {...obj1, ...obj2, ...obj4}
-console.log(obj3);
+// console.log(obj3);
 
 
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));  // gives keys in array format which can be used in many ways
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));  // gives keys in array format which can be used in many ways
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLogged'));   // to check whether it has that property or not
+// console.log(tinderUser.hasOwnProperty('isLogged'));   // to check whether it has that property or not
+
+
+// ++++++++++++++++++++++++++++++  destructure objects  +++++++++++++++++++++++++++++++++++++++++++++++
+
+const course = {
+    coursename: "Js in hindi",
+    courseprice: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: Instructor} = course
+
+console.log(Instructor);
+
+
+//  JSON
+
+// {
+//     "name": "khushi",
+//     "coursename": "JS in hindi",
+//     "price": "free"
+// }
