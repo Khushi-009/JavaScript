@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript </li>
+    </ul>
+</body>
+<script>
+    // adding language to the ul list of class language
+    // jb innerHTML use krte h toh pure ki travesing hoti h which is not optimised
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('Typescript')
+
+    // adding language to the same ul in an optimised way
+    // in this you do not have to traverse the whole tree but directly add a node
+    function addOptiLang(langName){
+        const li = document.createElement('li')
+        // const addText = document.createTextNode(langName)
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang('golang')
+    addOptiLang('ruby')
+
+    //  edit 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    // edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>TypeScript</li>"
+
+    //  remove 
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
